@@ -51,7 +51,20 @@ export default function Home() {
       </header>
 
       {/* Hero Section - Asimétrico */}
-      <section className="pt-32 pb-20 px-6 max-w-7xl mx-auto">
+      <section className="relative pt-32 pb-20 px-6 overflow-hidden">
+        {/* Video de fondo */}
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover z-0"
+        >
+          <source src="/fondo-hero.mp4" type="video/mp4" />
+        </video>
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-[#F8F6F3]/85 z-10" />
+        <div className="relative z-20 max-w-7xl mx-auto">
         <div className="grid md:grid-cols-12 gap-12 items-center">
           <div className="md:col-span-7">
             <div className="inline-block mb-4 px-4 py-2 bg-white rounded-full text-sm font-medium text-[#1B4B7A] border border-[#1B4B7A]/20">
@@ -128,6 +141,7 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </div>
         </div>
       </section>
 
