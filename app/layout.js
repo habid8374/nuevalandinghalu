@@ -33,7 +33,7 @@ export const metadata = {
     siteName: 'HALU Plataforma',
     type: 'website',
     locale: 'es_CO',
-    images: [{ url: '/halu-logo.jpg', width: 800, height: 600, alt: 'HALU Plataforma Escolar' }],
+    images: [{ url: 'https://haluplataform.com/halu-logo.jpg', width: 800, height: 600, alt: 'HALU Plataforma Escolar' }],
   },
   twitter: {
     card: 'summary_large_image',
