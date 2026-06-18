@@ -853,6 +853,7 @@ export default function Home() {
                 className="flex items-center gap-2 text-white/40 hover:text-white/70 transition-colors text-xs"
               >
                 Powered by
+                <img src="/axentiatech-logo.png" alt="Axentiatech" className="h-5 w-auto opacity-50 hover:opacity-80 transition-opacity" />
                 <span className="font-bold tracking-wide text-white/60">Axentiatech</span>
               </a>
             </div>
