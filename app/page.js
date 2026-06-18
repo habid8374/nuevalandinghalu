@@ -526,6 +526,62 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Proceso de Implementación */}
+      <section className="py-24 px-6 max-w-7xl mx-auto">
+        <div className="text-center mb-16">
+          <div className="inline-block mb-4 px-4 py-2 bg-white rounded-full text-sm font-medium text-[#1B4B7A] border border-[#1B4B7A]/20">
+            Proceso de implementación
+          </div>
+          <h2 className="font-display font-bold text-4xl md:text-5xl text-[#1B4B7A] mb-4">
+            Implementación en Solo <span className="text-[#FF6B7A]">15 Días</span>
+          </h2>
+          <p className="text-lg text-[#6B6B6B] max-w-2xl mx-auto">
+            Proceso estructurado y probado que garantiza una transición suave y sin interrupciones
+          </p>
+        </div>
+
+        <div className="relative">
+          {/* Línea conectora */}
+          <div className="hidden md:block absolute top-10 left-0 right-0 h-0.5 bg-[#E5E3DF] z-0" style={{top: '2.5rem'}} />
+
+          <div className="grid md:grid-cols-4 gap-8 relative z-10">
+            {[
+              { dias: 'Día 1-3', titulo: 'Configuración Inicial', desc: 'Instalación del sistema y configuración básica de tu institución', num: '01' },
+              { dias: 'Día 4-8', titulo: 'Capacitación del Equipo', desc: 'Entrenamiento completo para administradores y personal clave', num: '02' },
+              { dias: 'Día 9-12', titulo: 'Migración de Datos', desc: 'Importación segura de información existente de estudiantes', num: '03' },
+              { dias: 'Día 13-15', titulo: 'Puesta en Marcha', desc: 'Sistema completamente operativo y soporte continuo', num: '04' },
+            ].map((paso) => (
+              <div key={paso.num} className="flex flex-col items-center text-center">
+                <div className="w-20 h-20 rounded-full bg-[#1B4B7A] text-white flex items-center justify-center font-display font-bold text-2xl mb-6 shadow-lg border-4 border-white">
+                  {paso.num}
+                </div>
+                <div className="bg-white rounded-2xl p-6 border-2 border-[#E5E3DF] hover:border-[#1B4B7A] hover:shadow-lg transition-all w-full">
+                  <div className="inline-block mb-3 px-3 py-1 bg-[#FF6B7A]/10 text-[#FF6B7A] rounded-full text-xs font-bold uppercase tracking-wide">
+                    {paso.dias}
+                  </div>
+                  <h3 className="font-bold text-lg text-[#1B4B7A] mb-2">{paso.titulo}</h3>
+                  <p className="text-sm text-[#6B6B6B]">{paso.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-16 bg-[#1B4B7A] rounded-2xl p-8 text-center text-white">
+          <h3 className="font-display font-bold text-2xl mb-3">¿Listo para comenzar?</h3>
+          <p className="text-white/80 mb-6 max-w-xl mx-auto">
+            Nuestro equipo te acompañará en cada paso del proceso para garantizar el éxito de la implementación.
+          </p>
+          <Button
+            onClick={scrollToContact}
+            className="bg-[#FF6B7A] hover:bg-[#FF5565] text-white font-semibold px-8 py-3"
+          >
+            Solicitar demostración gratuita
+            <ArrowRight className="ml-2 w-5 h-5" />
+          </Button>
+        </div>
+      </section>
+
       {/* Planes */}
       <section id="planes" className="py-24 px-6 bg-white">
         <div className="max-w-7xl mx-auto">
