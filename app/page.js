@@ -28,6 +28,12 @@ export default function Home() {
     document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const openWhatsApp = (mensaje) => {
+    const numero = '573246868538';
+    const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
+    window.open(url, '_blank');
+  };
+
   return (
     <div className="bg-[#F8F6F3] text-[#2C2C2C] overflow-x-hidden">
       {/* Header */}
@@ -628,9 +634,9 @@ export default function Home() {
                   <span className="text-sm">Soporte por correo</span>
                 </li>
               </ul>
-              <Button 
+              <Button
                 className="w-full bg-white border-2 border-[#1B4B7A] text-[#1B4B7A] hover:bg-[#1B4B7A] hover:text-white font-semibold"
-                onClick={scrollToContact}
+                onClick={() => openWhatsApp('Hola HALU 👋 Me interesa el plan Básico (hasta 200 estudiantes, $5.000 por estudiante/año). Quisiera recibir más información.')}
               >
                 Solicitar información
               </Button>
@@ -675,9 +681,9 @@ export default function Home() {
                   <span className="text-sm">Soporte prioritario WhatsApp</span>
                 </li>
               </ul>
-              <Button 
+              <Button
                 className="w-full bg-[#FF6B7A] hover:bg-[#FF5565] text-white font-semibold"
-                onClick={scrollToContact}
+                onClick={() => openWhatsApp('Hola HALU 👋 Me interesa el plan Profesional (hasta 500 estudiantes, $4.500 por estudiante/año). Quisiera agendar una demostración gratuita.')}
               >
                 Solicitar demostración
               </Button>
@@ -715,9 +721,9 @@ export default function Home() {
                   <span className="text-sm">Gerente de cuenta dedicado</span>
                 </li>
               </ul>
-              <Button 
+              <Button
                 className="w-full bg-white border-2 border-[#1B4B7A] text-[#1B4B7A] hover:bg-[#1B4B7A] hover:text-white font-semibold"
-                onClick={scrollToContact}
+                onClick={() => openWhatsApp('Hola HALU 👋 Me interesa el plan Enterprise para más de 500 estudiantes. Quisiera agendar una reunión para hablar sobre precio personalizado y funcionalidades avanzadas.')}
               >
                 Solicitar reunión
               </Button>
