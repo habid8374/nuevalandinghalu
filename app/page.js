@@ -108,36 +108,36 @@ export default function Home() {
               </Button>
             </div>
           </div>
-          <div className="md:col-span-5 relative hidden md:block">
-            <div className="relative bg-white rounded-2xl shadow-2xl p-6 border-4 border-[#1B4B7A]/10">
-              <div className="absolute -top-4 -right-4 bg-[#FF6B7A] text-white px-4 py-2 rounded-lg font-bold text-sm rotate-3">
+          <div className="md:col-span-5 relative">
+            <div className="relative bg-white rounded-xl shadow-2xl p-3 md:p-6 border-4 border-[#1B4B7A]/10">
+              <div className="absolute -top-3 -right-3 bg-[#FF6B7A] text-white px-3 py-1 rounded-lg font-bold text-xs rotate-3">
                 ✓ 100% colombiano
               </div>
-              <div className="space-y-4">
-                <div className="bg-[#F8F6F3] p-4 rounded-lg">
-                  <div className="flex items-center gap-3 mb-2">
-                    <div className="w-10 h-10 bg-[#1B4B7A] rounded-lg flex items-center justify-center">
-                      <GraduationCap className="w-6 h-6 text-white" />
+              <div className="space-y-2 md:space-y-4">
+                <div className="bg-[#F8F6F3] p-2 md:p-4 rounded-lg">
+                  <div className="flex items-center gap-2 md:gap-3 mb-1">
+                    <div className="w-7 h-7 md:w-10 md:h-10 bg-[#1B4B7A] rounded-lg flex items-center justify-center flex-shrink-0">
+                      <GraduationCap className="w-4 h-4 md:w-6 md:h-6 text-white" />
                     </div>
-                    <div className="text-sm font-semibold">Académico completo</div>
+                    <div className="text-xs md:text-sm font-semibold">Académico completo</div>
                   </div>
                   <div className="text-xs text-[#6B6B6B]">Mallas, planes de clase, notas y boletines</div>
                 </div>
-                <div className="bg-[#F8F6F3] p-4 rounded-lg">
-                  <div className="flex items-center gap-3 mb-2">
-                    <div className="w-10 h-10 bg-[#FF6B7A] rounded-lg flex items-center justify-center">
-                      <Brain className="w-6 h-6 text-white" />
+                <div className="bg-[#F8F6F3] p-2 md:p-4 rounded-lg">
+                  <div className="flex items-center gap-2 md:gap-3 mb-1">
+                    <div className="w-7 h-7 md:w-10 md:h-10 bg-[#FF6B7A] rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Brain className="w-4 h-4 md:w-6 md:h-6 text-white" />
                     </div>
-                    <div className="text-sm font-semibold">Inteligencia artificial</div>
+                    <div className="text-xs md:text-sm font-semibold">Inteligencia artificial</div>
                   </div>
                   <div className="text-xs text-[#6B6B6B]">Planeación automática con Google Gemini</div>
                 </div>
-                <div className="bg-[#F8F6F3] p-4 rounded-lg">
-                  <div className="flex items-center gap-3 mb-2">
-                    <div className="w-10 h-10 bg-[#1B4B7A] rounded-lg flex items-center justify-center">
-                      <Bell className="w-6 h-6 text-white" />
+                <div className="bg-[#F8F6F3] p-2 md:p-4 rounded-lg">
+                  <div className="flex items-center gap-2 md:gap-3 mb-1">
+                    <div className="w-7 h-7 md:w-10 md:h-10 bg-[#1B4B7A] rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Bell className="w-4 h-4 md:w-6 md:h-6 text-white" />
                     </div>
-                    <div className="text-sm font-semibold">Comunicación en tiempo real</div>
+                    <div className="text-xs md:text-sm font-semibold">Comunicación en tiempo real</div>
                   </div>
                   <div className="text-xs text-[#6B6B6B]">Familias conectadas con el colegio</div>
                 </div>
