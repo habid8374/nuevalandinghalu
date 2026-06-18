@@ -23,6 +23,26 @@ import {
   Sparkles
 } from 'lucide-react';
 
+function FAQItem({ pregunta, respuesta }) {
+  const [open, setOpen] = useState(false);
+  return (
+    <div className="bg-white rounded-2xl border-2 border-[#E5E3DF] overflow-hidden">
+      <button
+        className="w-full text-left px-6 py-5 flex items-center justify-between gap-4 hover:bg-[#F8F6F3] transition-colors"
+        onClick={() => setOpen(!open)}
+      >
+        <span className="font-semibold text-[#1B4B7A] text-base md:text-lg">{pregunta}</span>
+        <span className={`text-[#FF6B7A] text-2xl font-bold flex-shrink-0 transition-transform duration-200 ${open ? 'rotate-45' : ''}`}>+</span>
+      </button>
+      {open && (
+        <div className="px-6 pb-5 text-[#6B6B6B] leading-relaxed border-t border-[#E5E3DF] pt-4">
+          {respuesta}
+        </div>
+      )}
+    </div>
+  );
+}
+
 export default function Home() {
   const scrollToContact = () => {
     document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' });
@@ -164,6 +184,26 @@ export default function Home() {
             </div>
           </div>
         </div>
+        </div>
+      </section>
+
+      {/* Stats Franja */}
+      <section className="bg-white border-b border-[#E5E3DF] py-10 px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+            {[
+              { valor: '14', label: 'Módulos activos', sub: 'académicos, admin y comunicación' },
+              { valor: '100%', label: 'En la nube', sub: 'accede desde cualquier dispositivo' },
+              { valor: '∞', label: 'Instituciones', sub: 'arquitectura multi-tenant escalable' },
+              { valor: '108', label: 'Preguntas ICFES', sub: 'incluidas desde el primer día' },
+            ].map((stat, i) => (
+              <div key={i} className="text-center">
+                <div className="text-3xl md:text-4xl font-bold text-[#1B4B7A] mb-1">{stat.valor}</div>
+                <div className="font-semibold text-[#2C2C2C] text-sm md:text-base mb-1">{stat.label}</div>
+                <div className="text-xs text-[#6B6B6B] leading-tight">{stat.sub}</div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -590,6 +630,42 @@ export default function Home() {
             Solicitar demostración gratuita
             <ArrowRight className="ml-2 w-5 h-5" />
           </Button>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-24 px-6 max-w-4xl mx-auto">
+        <div className="text-center mb-14">
+          <h2 className="font-display font-bold text-4xl md:text-5xl text-[#1B4B7A] mb-4">
+            Preguntas frecuentes
+          </h2>
+          <p className="text-lg text-[#6B6B6B]">Todo lo que necesitas saber antes de empezar</p>
+        </div>
+        <div className="space-y-4">
+          {[
+            {
+              q: '¿Qué incluye el plan contratado?',
+              a: 'Todos los planes incluyen acceso a los 14 módulos según el nivel, usuarios ilimitados dentro de la institución (docentes, coordinadores, familias), actualizaciones automáticas de la plataforma, soporte técnico por tickets y capacitación inicial del equipo.',
+            },
+            {
+              q: '¿Cómo funciona el precio por estudiante?',
+              a: 'El precio se calcula según el número de estudiantes activos de tu institución al momento de contratar. Se paga por institución, no por usuario administrador o docente. Si tu matrícula crece, ajustamos el precio proporcionalmente al renovar.',
+            },
+            {
+              q: '¿Hay contrato mínimo o permanencia?',
+              a: 'No. HALU funciona mes a mes sin permanencia. También ofrecemos plan anual con un 10% de descuento para instituciones que prefieran planificar su presupuesto con anticipación.',
+            },
+            {
+              q: '¿Qué pasa con los datos si cancelamos?',
+              a: 'Tus datos son tuyos. Si decides cancelar, te entregamos toda la información de la institución (estudiantes, notas, historial financiero) en formato estándar exportable (Excel/CSV) para que puedas migrarlos sin perder nada.',
+            },
+            {
+              q: '¿La plataforma cumple con la normativa colombiana?',
+              a: 'Sí. HALU está diseñada para colegios colombianos: boletines según Decreto 1290, PIAR con Decreto 1421, protección de datos con Ley 1581, convivencia con Ley 1620, y reportes alineados con los requerimientos del MEN.',
+            },
+          ].map((item, i) => (
+            <FAQItem key={i} pregunta={item.q} respuesta={item.a} />
+          ))}
         </div>
       </section>
 
