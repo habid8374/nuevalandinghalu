@@ -41,7 +41,16 @@ export default function Home() {
             <a href="#modulos" className="hover:text-[#FF6B7A] transition-colors">Módulos</a>
             <a href="#planes" className="hover:text-[#FF6B7A] transition-colors">Planes</a>
           </nav>
-          <Button 
+          <a
+            href="https://app.haluplataform.com/accounts/login/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden md:inline-flex items-center gap-1 border-2 border-[#1B4B7A] text-[#1B4B7A] hover:bg-[#1B4B7A] hover:text-white font-medium px-5 py-2 rounded-md transition-colors text-sm"
+          >
+            Ingresar
+            <ArrowRight className="w-4 h-4" />
+          </a>
+          <Button
             onClick={scrollToContact}
             className="bg-[#FF6B7A] hover:bg-[#FF5565] text-white font-medium px-6"
           >
