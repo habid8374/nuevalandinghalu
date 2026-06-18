@@ -109,35 +109,48 @@ export default function Home() {
             </div>
           </div>
           <div className="md:col-span-5 relative">
-            <div className="relative bg-white rounded-xl shadow-2xl p-3 md:p-6 border-4 border-[#1B4B7A]/10">
-              <div className="absolute -top-3 -right-3 bg-[#FF6B7A] text-white px-3 py-1 rounded-lg font-bold text-xs rotate-3">
+            {/* Mobile: versión compacta */}
+            <div className="block md:hidden relative bg-white/90 rounded-xl shadow-xl p-3 border-2 border-[#1B4B7A]/10">
+              <div className="absolute -top-3 -right-2 bg-[#FF6B7A] text-white px-2 py-1 rounded-lg font-bold text-xs rotate-3">
                 ✓ 100% colombiano
               </div>
-              <div className="space-y-2 md:space-y-4">
-                <div className="bg-[#F8F6F3] p-2 md:p-4 rounded-lg">
-                  <div className="flex items-center gap-2 md:gap-3 mb-1">
-                    <div className="w-7 h-7 md:w-10 md:h-10 bg-[#1B4B7A] rounded-lg flex items-center justify-center flex-shrink-0">
-                      <GraduationCap className="w-4 h-4 md:w-6 md:h-6 text-white" />
-                    </div>
-                    <div className="text-xs md:text-sm font-semibold">Académico completo</div>
+              <div className="flex flex-col gap-2 mt-1">
+                {[
+                  { icon: <GraduationCap className="w-3 h-3 text-white" />, color: 'bg-[#1B4B7A]', label: 'Académico completo' },
+                  { icon: <Brain className="w-3 h-3 text-white" />, color: 'bg-[#FF6B7A]', label: 'Inteligencia artificial' },
+                  { icon: <Bell className="w-3 h-3 text-white" />, color: 'bg-[#1B4B7A]', label: 'Comunicación en tiempo real' },
+                ].map((item, i) => (
+                  <div key={i} className="flex items-center gap-2 bg-[#F8F6F3] px-2 py-1.5 rounded-lg">
+                    <div className={`w-5 h-5 ${item.color} rounded-md flex items-center justify-center flex-shrink-0`}>{item.icon}</div>
+                    <span className="text-xs font-semibold text-[#1B4B7A]">{item.label}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+            {/* Desktop: versión completa */}
+            <div className="hidden md:block relative bg-white rounded-2xl shadow-2xl p-6 border-4 border-[#1B4B7A]/10">
+              <div className="absolute -top-4 -right-4 bg-[#FF6B7A] text-white px-4 py-2 rounded-lg font-bold text-sm rotate-3">
+                ✓ 100% colombiano
+              </div>
+              <div className="space-y-4">
+                <div className="bg-[#F8F6F3] p-4 rounded-lg">
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="w-10 h-10 bg-[#1B4B7A] rounded-lg flex items-center justify-center"><GraduationCap className="w-6 h-6 text-white" /></div>
+                    <div className="text-sm font-semibold">Académico completo</div>
                   </div>
                   <div className="text-xs text-[#6B6B6B]">Mallas, planes de clase, notas y boletines</div>
                 </div>
-                <div className="bg-[#F8F6F3] p-2 md:p-4 rounded-lg">
-                  <div className="flex items-center gap-2 md:gap-3 mb-1">
-                    <div className="w-7 h-7 md:w-10 md:h-10 bg-[#FF6B7A] rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Brain className="w-4 h-4 md:w-6 md:h-6 text-white" />
-                    </div>
-                    <div className="text-xs md:text-sm font-semibold">Inteligencia artificial</div>
+                <div className="bg-[#F8F6F3] p-4 rounded-lg">
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="w-10 h-10 bg-[#FF6B7A] rounded-lg flex items-center justify-center"><Brain className="w-6 h-6 text-white" /></div>
+                    <div className="text-sm font-semibold">Inteligencia artificial</div>
                   </div>
                   <div className="text-xs text-[#6B6B6B]">Planeación automática con Google Gemini</div>
                 </div>
-                <div className="bg-[#F8F6F3] p-2 md:p-4 rounded-lg">
-                  <div className="flex items-center gap-2 md:gap-3 mb-1">
-                    <div className="w-7 h-7 md:w-10 md:h-10 bg-[#1B4B7A] rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Bell className="w-4 h-4 md:w-6 md:h-6 text-white" />
-                    </div>
-                    <div className="text-xs md:text-sm font-semibold">Comunicación en tiempo real</div>
+                <div className="bg-[#F8F6F3] p-4 rounded-lg">
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="w-10 h-10 bg-[#1B4B7A] rounded-lg flex items-center justify-center"><Bell className="w-6 h-6 text-white" /></div>
+                    <div className="text-sm font-semibold">Comunicación en tiempo real</div>
                   </div>
                   <div className="text-xs text-[#6B6B6B]">Familias conectadas con el colegio</div>
                 </div>
