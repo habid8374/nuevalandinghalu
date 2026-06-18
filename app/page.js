@@ -92,7 +92,7 @@ export default function Home() {
               </span>
               {' '}y bajo control
             </h1>
-            <p className="text-lg md:text-xl text-[#6B6B6B] mb-8 max-w-xl leading-relaxed">
+            <p className="text-lg md:text-xl text-[#1B4B7A] font-medium mb-8 max-w-xl leading-relaxed drop-shadow-sm">
               El sistema operativo escolar todo-en-uno que necesitan los colegios en Colombia. Sin hojas de cálculo, sin diez programas distintos.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
