@@ -108,7 +108,7 @@ export default function Home() {
               </Button>
             </div>
           </div>
-          <div className="md:col-span-5 relative">
+          <div className="md:col-span-5 relative hidden md:block">
             <div className="relative bg-white rounded-2xl shadow-2xl p-6 border-4 border-[#1B4B7A]/10">
               <div className="absolute -top-4 -right-4 bg-[#FF6B7A] text-white px-4 py-2 rounded-lg font-bold text-sm rotate-3">
                 ✓ 100% colombiano
