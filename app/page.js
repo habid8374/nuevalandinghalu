@@ -837,8 +837,6 @@ export default function Home() {
                 <a href="/terminos-y-servicios" className="hover:text-[#FF6B7A] transition-colors">Términos y servicios</a>
                 <span className="text-white/20">|</span>
                 <a href="/cookies" className="hover:text-[#FF6B7A] transition-colors">Cookies</a>
-                <span className="text-white/20">|</span>
-                <a href="/sitemap.xml" className="hover:text-[#FF6B7A] transition-colors">Mapa del sitio</a>
               </div>
             </div>
             <div className="flex flex-col md:flex-row justify-between items-center gap-2">
