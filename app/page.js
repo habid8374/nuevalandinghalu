@@ -46,14 +46,14 @@ export default function Home() {
               href="https://app.haluplataform.com/accounts/login/"
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden md:inline-flex items-center gap-1 border-2 border-[#1B4B7A] text-[#1B4B7A] hover:bg-[#1B4B7A] hover:text-white font-medium px-5 py-2 rounded-md transition-colors text-sm"
+              className="inline-flex items-center gap-1 border-2 border-[#1B4B7A] text-[#1B4B7A] hover:bg-[#1B4B7A] hover:text-white font-medium px-3 md:px-5 py-2 rounded-md transition-colors text-xs md:text-sm"
             >
               Ingresar
-              <ArrowRight className="w-4 h-4" />
+              <ArrowRight className="w-3 h-3 md:w-4 md:h-4" />
             </a>
             <Button
               onClick={scrollToContact}
-              className="bg-[#FF6B7A] hover:bg-[#FF5565] text-white font-medium px-6"
+              className="bg-[#FF6B7A] hover:bg-[#FF5565] text-white font-medium px-3 md:px-6 text-xs md:text-sm"
             >
               Contáctanos
             </Button>
