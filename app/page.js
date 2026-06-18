@@ -62,21 +62,20 @@ export default function Home() {
       </header>
 
       {/* Hero Section - Asimétrico */}
-      <section className="relative pt-32 pb-20 px-6 overflow-hidden min-h-[600px] md:min-h-screen flex items-center">
+      <section className="relative pt-28 pb-16 px-6 overflow-hidden min-h-[420px] md:min-h-screen flex items-center">
         {/* Video de fondo */}
         <video
           autoPlay
           muted
           loop
           playsInline
-          className="absolute inset-0 w-full h-full object-cover object-center z-0"
-          style={{maxHeight: '100%'}}
+          className="absolute inset-0 w-full h-full object-cover z-0"
+          style={{objectPosition: '50% 50%'}}
         >
           <source src="/fondo-hero.mp4" type="video/mp4" />
         </video>
-        {/* Overlay semitransparente — más fuerte en móvil para legibilidad */}
-        <div className="absolute inset-0 z-10 md:hidden" style={{background: 'rgba(248,246,243,0.75)'}} />
-        <div className="absolute inset-0 z-10 hidden md:block" style={{background: 'rgba(248,246,243,0.35)'}} />
+        {/* Overlay uniforme */}
+        <div className="absolute inset-0 z-10" style={{background: 'rgba(248,246,243,0.35)'}} />
         <div className="relative z-20 max-w-7xl mx-auto w-full">
         <div className="grid md:grid-cols-12 gap-12 items-center">
           <div className="md:col-span-7">
