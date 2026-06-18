@@ -828,9 +828,31 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="pt-8 border-t border-white/10 text-center text-white/50 text-sm">
-            <p>© 2025 HALU Plataforma. Todos los derechos reservados.</p>
-            <p className="mt-2">Hecho con ❤️ en Colombia para la educación colombiana</p>
+          <div className="pt-8 border-t border-white/10">
+            <div className="flex flex-col md:flex-row justify-between items-center gap-4 mb-4">
+              <p className="text-white/50 text-sm">© 2026 HALU Plataforma. Todos los derechos reservados.</p>
+              <div className="flex flex-wrap justify-center gap-4 text-white/50 text-sm">
+                <a href="/politicas-de-privacidad" className="hover:text-[#FF6B7A] transition-colors">Políticas de privacidad</a>
+                <span className="text-white/20">|</span>
+                <a href="/terminos-y-servicios" className="hover:text-[#FF6B7A] transition-colors">Términos y servicios</a>
+                <span className="text-white/20">|</span>
+                <a href="/cookies" className="hover:text-[#FF6B7A] transition-colors">Cookies</a>
+                <span className="text-white/20">|</span>
+                <a href="/sitemap.xml" className="hover:text-[#FF6B7A] transition-colors">Mapa del sitio</a>
+              </div>
+            </div>
+            <div className="flex flex-col md:flex-row justify-between items-center gap-2">
+              <p className="text-white/40 text-sm">Hecho con ❤️ en Colombia para la educación colombiana</p>
+              <a
+                href="https://axentiatech.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-white/40 hover:text-white/70 transition-colors text-xs"
+              >
+                Powered by
+                <span className="font-bold tracking-wide text-white/60">Axentiatech</span>
+              </a>
+            </div>
           </div>
         </div>
       </footer>
