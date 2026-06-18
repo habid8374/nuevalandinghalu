@@ -41,21 +41,23 @@ export default function Home() {
             <a href="#modulos" className="hover:text-[#FF6B7A] transition-colors">Módulos</a>
             <a href="#planes" className="hover:text-[#FF6B7A] transition-colors">Planes</a>
           </nav>
-          <a
-            href="https://app.haluplataform.com/accounts/login/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hidden md:inline-flex items-center gap-1 border-2 border-[#1B4B7A] text-[#1B4B7A] hover:bg-[#1B4B7A] hover:text-white font-medium px-5 py-2 rounded-md transition-colors text-sm"
-          >
-            Ingresar
-            <ArrowRight className="w-4 h-4" />
-          </a>
-          <Button
-            onClick={scrollToContact}
-            className="bg-[#FF6B7A] hover:bg-[#FF5565] text-white font-medium px-6"
-          >
-            Contáctanos
-          </Button>
+          <div className="flex items-center gap-3">
+            <a
+              href="https://app.haluplataform.com/accounts/login/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden md:inline-flex items-center gap-1 border-2 border-[#1B4B7A] text-[#1B4B7A] hover:bg-[#1B4B7A] hover:text-white font-medium px-5 py-2 rounded-md transition-colors text-sm"
+            >
+              Ingresar
+              <ArrowRight className="w-4 h-4" />
+            </a>
+            <Button
+              onClick={scrollToContact}
+              className="bg-[#FF6B7A] hover:bg-[#FF5565] text-white font-medium px-6"
+            >
+              Contáctanos
+            </Button>
+          </div>
         </div>
       </header>
 
@@ -521,83 +523,6 @@ export default function Home() {
               </p>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Testimonios */}
-      <section className="py-24 px-6 max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="font-display font-bold text-4xl md:text-5xl text-[#1B4B7A] mb-4">
-            Lo que dicen los colegios
-          </h2>
-          <p className="text-lg text-[#6B6B6B]">Historias reales de transformación</p>
-        </div>
-        <div className="grid md:grid-cols-3 gap-8">
-          <Card className="p-8 border-2 border-[#E5E3DF] hover:border-[#1B4B7A] transition-all">
-            <div className="mb-4">
-              <div className="flex gap-1 mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <span key={i} className="text-[#FF6B7A] text-xl">★</span>
-                ))}
-              </div>
-              <p className="text-[#6B6B6B] mb-6 italic">
-                "Antes perdíamos horas consolidando notas de diferentes profesores. Con HALU, los boletines se generan solos. Nos ahorra mínimo 20 horas al mes."
-              </p>
-            </div>
-            <div className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-[#1B4B7A] rounded-full flex items-center justify-center text-white font-bold">
-                MC
-              </div>
-              <div>
-                <div className="font-bold text-sm">[Testimonio aquí]</div>
-                <div className="text-xs text-[#6B6B6B]">Coordinadora Académica</div>
-              </div>
-            </div>
-          </Card>
-
-          <Card className="p-8 border-2 border-[#E5E3DF] hover:border-[#1B4B7A] transition-all">
-            <div className="mb-4">
-              <div className="flex gap-1 mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <span key={i} className="text-[#FF6B7A] text-xl">★</span>
-                ))}
-              </div>
-              <p className="text-[#6B6B6B] mb-6 italic">
-                "El módulo de pagos cambió nuestra vida. Antes teníamos que perseguir a los padres; ahora pagan en línea y todo se registra automático. Recaudamos un 35% más rápido."
-              </p>
-            </div>
-            <div className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-[#1B4B7A] rounded-full flex items-center justify-center text-white font-bold">
-                LG
-              </div>
-              <div>
-                <div className="font-bold text-sm">[Testimonio aquí]</div>
-                <div className="text-xs text-[#6B6B6B]">Rectora</div>
-              </div>
-            </div>
-          </Card>
-
-          <Card className="p-8 border-2 border-[#E5E3DF] hover:border-[#1B4B7A] transition-all">
-            <div className="mb-4">
-              <div className="flex gap-1 mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <span key={i} className="text-[#FF6B7A] text-xl">★</span>
-                ))}
-              </div>
-              <p className="text-[#6B6B6B] mb-6 italic">
-                "Como padre, me encanta poder ver en tiempo real cómo va mi hija. Las notas, la asistencia, todo está ahí. Ya no tengo que estar llamando al colegio."
-              </p>
-            </div>
-            <div className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-[#1B4B7A] rounded-full flex items-center justify-center text-white font-bold">
-                JP
-              </div>
-              <div>
-                <div className="font-bold text-sm">[Testimonio aquí]</div>
-                <div className="text-xs text-[#6B6B6B]">Padre de familia</div>
-              </div>
-            </div>
-          </Card>
         </div>
       </section>
 
