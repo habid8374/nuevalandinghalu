@@ -62,8 +62,8 @@ export default function Home() {
       </header>
 
       {/* Hero Section - Asimétrico */}
-      <section className="relative pt-28 pb-16 px-6 overflow-hidden flex items-center md:min-h-screen" style={{minHeight: '100svh'}}>
-        {/* Video de fondo */}
+      <section className="relative pt-28 pb-16 px-6 overflow-hidden flex items-center md:min-h-screen" style={{minHeight: '100svh', backgroundColor: '#F8F6F3'}}>
+        {/* Video desktop */}
         <video
           autoPlay
           muted
@@ -74,14 +74,14 @@ export default function Home() {
         >
           <source src="/fondo-hero.mp4" type="video/mp4" />
         </video>
-        {/* Video móvil: ancho completo, altura proporcional al video, centrado */}
+        {/* Video móvil: contain para ver el video completo sin zoom */}
         <video
           autoPlay
           muted
           loop
           playsInline
           className="absolute z-0 block md:hidden"
-          style={{top:'50%', left:'50%', transform:'translate(-50%, -50%)', width:'100%', height:'auto', minHeight:'100%', objectFit:'cover'}}
+          style={{top:0, left:0, width:'100%', height:'100%', objectFit:'contain', objectPosition:'center top', backgroundColor:'#F8F6F3'}}
         >
           <source src="/fondo-hero.mp4" type="video/mp4" />
         </video>
