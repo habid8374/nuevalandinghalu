@@ -25,22 +25,24 @@ import {
 
 function IntroVideo({ onFinish }) {
   return (
-    <div className="fixed inset-0 z-[9999] bg-black flex items-center justify-center">
-      <video
-        autoPlay
-        muted
-        playsInline
-        onEnded={onFinish}
-        className="w-full h-full object-cover"
-      >
-        <source src="/intro.mp4" type="video/mp4" />
-      </video>
-      <button
-        onClick={onFinish}
-        className="absolute bottom-8 right-8 bg-white/20 hover:bg-white/40 text-white text-sm font-semibold px-5 py-2 rounded-full backdrop-blur-sm transition-all duration-200 border border-white/30"
-      >
-        Saltar →
-      </button>
+    <div className="fixed inset-0 z-[9999] bg-black/80 backdrop-blur-sm flex items-center justify-center p-6">
+      <div className="relative w-full max-w-lg rounded-2xl overflow-hidden shadow-2xl">
+        <video
+          autoPlay
+          muted
+          playsInline
+          onEnded={onFinish}
+          className="w-full"
+        >
+          <source src="/intro.mp4" type="video/mp4" />
+        </video>
+        <button
+          onClick={onFinish}
+          className="absolute bottom-4 right-4 bg-black/50 hover:bg-black/70 text-white text-sm font-semibold px-4 py-2 rounded-full backdrop-blur-sm transition-all duration-200 border border-white/30"
+        >
+          Saltar →
+        </button>
+      </div>
     </div>
   );
 }
@@ -66,13 +68,9 @@ function FAQItem({ pregunta, respuesta }) {
 }
 
 export default function Home() {
-  const [showIntro, setShowIntro] = useState(() => {
-    if (typeof window === 'undefined') return false;
-    return !sessionStorage.getItem('intro_seen');
-  });
+  const [showIntro, setShowIntro] = useState(true);
 
   const handleIntroFinish = () => {
-    sessionStorage.setItem('intro_seen', '1');
     setShowIntro(false);
   };
 
