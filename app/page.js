@@ -23,6 +23,28 @@ import {
   Sparkles
 } from 'lucide-react';
 
+function IntroVideo({ onFinish }) {
+  return (
+    <div className="fixed inset-0 z-[9999] bg-black flex items-center justify-center">
+      <video
+        autoPlay
+        muted
+        playsInline
+        onEnded={onFinish}
+        className="w-full h-full object-cover"
+      >
+        <source src="/intro.mp4" type="video/mp4" />
+      </video>
+      <button
+        onClick={onFinish}
+        className="absolute bottom-8 right-8 bg-white/20 hover:bg-white/40 text-white text-sm font-semibold px-5 py-2 rounded-full backdrop-blur-sm transition-all duration-200 border border-white/30"
+      >
+        Saltar →
+      </button>
+    </div>
+  );
+}
+
 function FAQItem({ pregunta, respuesta }) {
   const [open, setOpen] = useState(false);
   return (
@@ -44,6 +66,16 @@ function FAQItem({ pregunta, respuesta }) {
 }
 
 export default function Home() {
+  const [showIntro, setShowIntro] = useState(() => {
+    if (typeof window === 'undefined') return false;
+    return !sessionStorage.getItem('intro_seen');
+  });
+
+  const handleIntroFinish = () => {
+    sessionStorage.setItem('intro_seen', '1');
+    setShowIntro(false);
+  };
+
   const scrollToContact = () => {
     document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -55,6 +87,8 @@ export default function Home() {
   };
 
   return (
+    <>
+    {showIntro && <IntroVideo onFinish={handleIntroFinish} />}
     <div className="bg-[#F8F6F3] text-[#2C2C2C] overflow-x-hidden">
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm border-b border-[#E5E3DF]">
@@ -943,5 +977,6 @@ export default function Home() {
         </div>
       </footer>
     </div>
+    </>
   );
 }
