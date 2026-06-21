@@ -25,7 +25,7 @@ import {
 
 function IntroVideo({ onFinish }) {
   return (
-    <div className="fixed inset-0 z-[9999] bg-black/80 backdrop-blur-sm flex items-center justify-center p-6">
+    <div className="fixed inset-0 z-[9999] flex items-center justify-center p-6" style={{background: 'linear-gradient(135deg, #0F2A42 0%, #1B4B7A 50%, #0F2A42 100%)'}}>
       <div className="relative w-full max-w-lg rounded-2xl overflow-hidden shadow-2xl">
         <video
           autoPlay
