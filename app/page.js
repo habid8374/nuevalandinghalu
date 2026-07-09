@@ -609,6 +609,57 @@ export default function Home() {
         </div>
       </section>
 
+      {/* App instalable */}
+      <section className="py-24 px-6 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 bg-[#1B4B7A]/10 rounded-full text-sm font-medium text-[#1B4B7A]">
+                <span>📱</span> Sin tiendas, sin descargas
+              </div>
+              <h2 className="font-display font-bold text-4xl md:text-5xl text-[#1B4B7A] mb-4">
+                Llévala en tu celular{' '}
+                <span className="text-[#FF6B7A]">como una app</span>
+              </h2>
+              <p className="text-lg text-[#6B6B6B] mb-6 leading-relaxed">
+                HALU se instala directamente desde el navegador — sin pasar por Play Store ni App Store —. Con un solo toque queda en tu pantalla de inicio y se abre como cualquier otra aplicación: rápida, en pantalla completa y sin escribir la dirección cada vez.
+              </p>
+              <div className="bg-[#F8F6F3] rounded-2xl p-6 space-y-4">
+                <p className="text-sm font-bold text-[#1B4B7A] uppercase tracking-wide mb-2">Cómo instalarlo en 3 pasos</p>
+                {[
+                  { num: '1', texto: 'Abre app.haluplataform.com en tu navegador' },
+                  { num: '2', texto: 'Toca "Agregar a pantalla de inicio" o "Instalar app"' },
+                  { num: '3', texto: '¡Listo! Ya tienes HALU como una app en tu dispositivo' },
+                ].map((paso) => (
+                  <div key={paso.num} className="flex items-start gap-3">
+                    <div className="w-7 h-7 rounded-full bg-[#FF6B7A] text-white flex items-center justify-center font-bold text-sm flex-shrink-0">
+                      {paso.num}
+                    </div>
+                    <p className="text-[#2C2C2C] text-sm pt-1">{paso.texto}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="flex justify-center">
+              <div className="relative">
+                <div className="w-56 h-[420px] bg-[#1B4B7A] rounded-[3rem] shadow-2xl flex flex-col items-center justify-center border-4 border-[#0F2A42] p-4">
+                  <div className="w-20 h-1 bg-white/20 rounded-full mb-8 mt-2"></div>
+                  <div className="w-full flex-1 bg-[#F8F6F3] rounded-2xl flex flex-col items-center justify-center gap-3 p-4">
+                    <img src="/halu-logo.jpg" alt="HALU" className="w-16 h-16 rounded-2xl shadow-lg" />
+                    <span className="text-[#1B4B7A] font-bold text-sm">HALU Plataforma</span>
+                    <span className="text-[#6B6B6B] text-xs text-center">Toca para abrir</span>
+                  </div>
+                  <div className="w-10 h-10 rounded-full border-2 border-white/20 mt-4 mb-2"></div>
+                </div>
+                <div className="absolute -top-3 -right-3 bg-[#FF6B7A] text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">
+                  ¡Sin descargas!
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Proceso de Implementación */}
       <section className="py-24 px-6 max-w-7xl mx-auto">
         <div className="text-center mb-16">
