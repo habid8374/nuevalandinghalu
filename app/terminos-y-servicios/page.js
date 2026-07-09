@@ -11,7 +11,7 @@ export default function TerminosYServicios() {
       <header className="bg-white border-b border-[#E5E3DF] py-4 px-6">
         <div className="max-w-4xl mx-auto flex items-center justify-between">
           <Link href="/">
-            <img src="/halu-logo.jpg" alt="HALU" className="h-10 rounded-lg" />
+            <img src="/halu-logo.png" alt="HALU" className="h-10 rounded-lg" />
           </Link>
           <Link href="/" className="text-sm text-[#1B4B7A] hover:text-[#FF6B7A] transition-colors font-medium">
             ← Volver al inicio

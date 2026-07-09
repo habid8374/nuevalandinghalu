@@ -92,7 +92,7 @@ export default function Home() {
       <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm border-b border-[#E5E3DF]">
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
           <div className="flex items-center gap-3">
-            <img src="/halu-logo.jpg" alt="HALU" className="h-12 rounded-lg" />
+            <img src="/halu-logo.png" alt="HALU" className="h-12 rounded-lg" />
           </div>
           <nav className="hidden md:flex gap-8 text-sm font-medium">
             <a href="#plataforma" className="hover:text-[#FF6B7A] transition-colors">Plataforma</a>
@@ -645,7 +645,7 @@ export default function Home() {
                 <div className="w-56 h-[420px] bg-[#1B4B7A] rounded-[3rem] shadow-2xl flex flex-col items-center justify-center border-4 border-[#0F2A42] p-4">
                   <div className="w-20 h-1 bg-white/20 rounded-full mb-8 mt-2"></div>
                   <div className="w-full flex-1 bg-[#F8F6F3] rounded-2xl flex flex-col items-center justify-center gap-3 p-4">
-                    <img src="/halu-logo.jpg" alt="HALU" className="w-16 h-16 rounded-2xl shadow-lg" />
+                    <img src="/halu-icon.png" alt="HALU" className="w-16 h-16 rounded-2xl shadow-lg" />
                     <span className="text-[#1B4B7A] font-bold text-sm">HALU Plataforma</span>
                     <span className="text-[#6B6B6B] text-xs text-center">Toca para abrir</span>
                   </div>
@@ -950,7 +950,7 @@ export default function Home() {
           <div className="grid md:grid-cols-4 gap-12 mb-12">
             <div className="md:col-span-2">
               <div className="flex items-center gap-3 mb-4">
-                <img src="/halu-logo.jpg" alt="HALU" className="h-12 rounded-lg" />
+                <img src="/halu-logo.png" alt="HALU" className="h-12 rounded-lg" />
               </div>
               <p className="text-white/70 mb-6">
                 Conectando mentes, creando futuros. El sistema operativo escolar que los colegios colombianos necesitan.
