@@ -609,6 +609,160 @@ export default function Home() {
         </div>
       </section>
 
+      {/* PIAR */}
+      <section className="py-24 px-6 bg-white overflow-hidden">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-16 items-center">
+            <div>
+              <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 bg-[#FF6B7A]/10 rounded-full text-sm font-semibold text-[#FF6B7A]">
+                <Shield className="w-4 h-4" /> Módulo 09 · Decreto 1421 de 2017
+              </div>
+              <h2 className="font-display font-bold text-4xl md:text-5xl text-[#1B4B7A] mb-4">
+                PIAR: inclusión que{' '}
+                <span className="text-[#FF6B7A]">de verdad actúa</span>
+              </h2>
+              <p className="text-lg text-[#6B6B6B] mb-8 leading-relaxed">
+                El PIAR en HALU no se queda en papel digital. Los ajustes razonables que defines para cada estudiante con discapacidad se aplican automáticamente en la plataforma — tiempo extra, lectura por voz, alto contraste, fuente legible — sin que el estudiante tenga que configurar nada.
+              </p>
+              <div className="space-y-4">
+                {[
+                  { icon: '📋', titulo: 'Un PIAR por estudiante por año', desc: 'Con condición, estado del plan, compromisos documentados y ajustes por materia y período.' },
+                  { icon: '🤖', titulo: 'La IA lee los enunciados en voz alta', desc: '"Explícalo fácil": reescribe cualquier texto en lenguaje sencillo sin cambiar la respuesta correcta.' },
+                  { icon: '⏱️', titulo: 'Tiempo extra automático en evaluaciones', desc: 'El cuestionario amplía su temporizador según el apoyo definido para el estudiante. Sin intervención manual.' },
+                  { icon: '🔒', titulo: 'Control de acceso por rol', desc: 'Solo coordinación crea, edita o elimina el PIAR. Privacidad reforzada conforme a la Ley 1581/2012.' },
+                ].map((item, i) => (
+                  <div key={i} className="flex items-start gap-4 p-4 rounded-xl hover:bg-[#F8F6F3] transition-colors">
+                    <span className="text-2xl flex-shrink-0">{item.icon}</span>
+                    <div>
+                      <h4 className="font-bold text-[#1B4B7A] mb-1">{item.titulo}</h4>
+                      <p className="text-sm text-[#6B6B6B] leading-relaxed">{item.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="relative">
+              <div className="bg-gradient-to-br from-[#1B4B7A] to-[#0F2A42] rounded-3xl p-8 text-white shadow-2xl">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-10 h-10 bg-[#FF6B7A] rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Shield className="w-5 h-5 text-white" />
+                  </div>
+                  <div>
+                    <p className="font-bold text-lg">PIAR · Estudiante</p>
+                    <p className="text-white/60 text-sm">Año lectivo 2026</p>
+                  </div>
+                  <span className="ml-auto bg-green-400/20 text-green-300 text-xs font-bold px-3 py-1 rounded-full">Activo</span>
+                </div>
+                <div className="space-y-3 mb-6">
+                  {[
+                    { label: 'Condición', valor: 'Discapacidad visual parcial' },
+                    { label: 'Ajuste aplicado', valor: 'Fuente grande + Alto contraste' },
+                    { label: 'Tiempo extra', valor: '+30 min en evaluaciones' },
+                    { label: 'Lectura por voz', valor: 'Activada en español' },
+                  ].map((item, i) => (
+                    <div key={i} className="flex justify-between items-center bg-white/10 rounded-lg px-4 py-2 text-sm">
+                      <span className="text-white/60">{item.label}</span>
+                      <span className="font-semibold">{item.valor}</span>
+                    </div>
+                  ))}
+                </div>
+                <div className="border-t border-white/10 pt-4">
+                  <p className="text-white/60 text-xs mb-3 uppercase tracking-wide font-semibold">Compromisos</p>
+                  <div className="space-y-2">
+                    {['Familia firmó acuerdo de acompañamiento', 'Docentes ajustaron plan de Matemáticas', 'Seguimiento período 2 · En proceso'].map((c, i) => (
+                      <div key={i} className="flex items-center gap-2 text-sm">
+                        <CheckCircle2 className="w-4 h-4 text-[#FF6B7A] flex-shrink-0" />
+                        <span>{c}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+              <div className="absolute -bottom-4 -right-4 bg-[#FF6B7A] text-white text-xs font-bold px-4 py-2 rounded-full shadow-lg">
+                Decreto 1421 · 100% cumplido
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SIMAT */}
+      <section className="py-24 px-6 bg-[#F8F6F3] overflow-hidden">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-16 items-center">
+            <div className="order-2 md:order-1 relative">
+              <div className="bg-white rounded-3xl p-8 shadow-2xl border-2 border-[#E5E3DF]">
+                <div className="flex items-center justify-between mb-6">
+                  <div>
+                    <p className="font-bold text-[#1B4B7A] text-lg">Reporte SIMAT</p>
+                    <p className="text-[#6B6B6B] text-sm">Institución · Año 2026</p>
+                  </div>
+                  <div className="bg-[#1B4B7A] text-white text-xs font-bold px-3 py-2 rounded-lg">MEN Oficial</div>
+                </div>
+                <div className="grid grid-cols-2 gap-3 mb-6">
+                  {[
+                    { label: 'Estudiantes matriculados', valor: '248' },
+                    { label: 'Sedes registradas', valor: '2' },
+                    { label: 'Municipios DANE', valor: '1.122 ✓' },
+                    { label: 'Estado del reporte', valor: 'Listo' },
+                  ].map((item, i) => (
+                    <div key={i} className="bg-[#F8F6F3] rounded-xl p-3 text-center">
+                      <p className="font-bold text-[#1B4B7A] text-lg">{item.valor}</p>
+                      <p className="text-xs text-[#6B6B6B] mt-1 leading-tight">{item.label}</p>
+                    </div>
+                  ))}
+                </div>
+                <div className="space-y-2 mb-6">
+                  {['Datos capturados una sola vez en admisión', 'Catálogos DANE ya cargados (sin digitación)', 'Etnias, resguardos y EPS incluidos', 'Grupos y secciones listos para el reporte'].map((item, i) => (
+                    <div key={i} className="flex items-center gap-2 text-sm text-[#2C2C2C]">
+                      <CheckCircle2 className="w-4 h-4 text-[#1B4B7A] flex-shrink-0" />
+                      {item}
+                    </div>
+                  ))}
+                </div>
+                <button className="w-full bg-[#1B4B7A] text-white font-bold py-3 rounded-xl flex items-center justify-center gap-2 hover:bg-[#143A62] transition-colors">
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                  </svg>
+                  Descargar archivo plano SIMAT
+                </button>
+              </div>
+              <div className="absolute -top-4 -left-4 bg-[#1B4B7A] text-white text-xs font-bold px-4 py-2 rounded-full shadow-lg">
+                ★ Nuevo 2026
+              </div>
+            </div>
+            <div className="order-1 md:order-2">
+              <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 bg-[#1B4B7A]/10 rounded-full text-sm font-semibold text-[#1B4B7A]">
+                <BarChart3 className="w-4 h-4" /> Módulo 18 · Ministerio de Educación Nacional
+              </div>
+              <h2 className="font-display font-bold text-4xl md:text-5xl text-[#1B4B7A] mb-4">
+                SIMAT: el reporte al{' '}
+                <span className="text-[#FF6B7A]">Ministerio, listo desde la plataforma</span>
+              </h2>
+              <p className="text-lg text-[#6B6B6B] mb-8 leading-relaxed">
+                Olvídate de recapturar datos. HALU prepara y exporta el archivo plano del reporte de matrícula oficial para el SIMAT y el SIMPADE en un clic — con los catálogos DANE ya cargados y los datos del estudiante capturados una sola vez desde la inscripción.
+              </p>
+              <div className="space-y-4">
+                {[
+                  { icon: '🗺️', titulo: '1.122 municipios DANE incluidos', desc: 'Departamentos, municipios, etnias, resguardos y EPS listos. El usuario selecciona de una lista, nunca digita a mano.' },
+                  { icon: '🏫', titulo: 'Sedes y grupos como los exige el SIMAT', desc: 'Administra varias sedes y organiza cada grado en grupos (01, 02, A, B…). Todo viaja al reporte oficial automáticamente.' },
+                  { icon: '📊', titulo: 'SIMPADE integrado', desc: 'Estrato, SISBÉN, régimen de salud, víctimas del conflicto y discapacidad capturados en la caracterización del estudiante.' },
+                  { icon: '🔐', titulo: '100% aislado por institución', desc: 'Cada colegio ve y exporta únicamente su propia matrícula. Sin mezclas, sin errores.' },
+                ].map((item, i) => (
+                  <div key={i} className="flex items-start gap-4 p-4 rounded-xl hover:bg-white transition-colors">
+                    <span className="text-2xl flex-shrink-0">{item.icon}</span>
+                    <div>
+                      <h4 className="font-bold text-[#1B4B7A] mb-1">{item.titulo}</h4>
+                      <p className="text-sm text-[#6B6B6B] leading-relaxed">{item.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* App instalable */}
       <section className="py-24 px-6 bg-white">
         <div className="max-w-7xl mx-auto">
