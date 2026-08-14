@@ -944,8 +944,8 @@ export default function Home() {
             <Card className="p-8 border-2 border-[#E5E3DF] hover:shadow-xl transition-all">
               <div className="text-sm font-semibold text-[#6B6B6B] mb-2 uppercase tracking-wide">Básico</div>
               <div className="mb-6">
-                <div className="text-4xl font-display font-bold text-[#1B4B7A] mb-2">$5,000</div>
-                <div className="text-sm text-[#6B6B6B]">por estudiante/año</div>
+                <div className="text-3xl font-display font-bold text-[#1B4B7A] mb-1">A cotizar</div>
+                <div className="text-sm text-[#6B6B6B]">Precio según tu institución</div>
               </div>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-start gap-2">
@@ -971,7 +971,7 @@ export default function Home() {
               </ul>
               <Button
                 className="w-full bg-white border-2 border-[#1B4B7A] text-[#1B4B7A] hover:bg-[#1B4B7A] hover:text-white font-semibold"
-                onClick={() => openWhatsApp('Hola HALU 👋 Me interesa el plan Básico (hasta 200 estudiantes, $5.000 por estudiante/año). Quisiera recibir más información.')}
+                onClick={() => openWhatsApp('Hola HALU 👋 Me interesa el plan Básico (hasta 200 estudiantes). Quisiera recibir más información y cotizar.')}
               >
                 Solicitar información
               </Button>
@@ -983,8 +983,8 @@ export default function Home() {
               </div>
               <div className="text-sm font-semibold text-[#FF6B7A] mb-2 uppercase tracking-wide">Profesional</div>
               <div className="mb-6">
-                <div className="text-4xl font-display font-bold text-[#1B4B7A] mb-2">$4,500</div>
-                <div className="text-sm text-[#6B6B6B]">por estudiante/año</div>
+                <div className="text-3xl font-display font-bold text-[#1B4B7A] mb-1">A cotizar</div>
+                <div className="text-sm text-[#6B6B6B]">Precio según tu institución</div>
               </div>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-start gap-2">
@@ -1018,7 +1018,7 @@ export default function Home() {
               </ul>
               <Button
                 className="w-full bg-[#FF6B7A] hover:bg-[#FF5565] text-white font-semibold"
-                onClick={() => openWhatsApp('Hola HALU 👋 Me interesa el plan Profesional (hasta 500 estudiantes, $4.500 por estudiante/año). Quisiera agendar una demostración gratuita.')}
+                onClick={() => openWhatsApp('Hola HALU 👋 Me interesa el plan Profesional (hasta 500 estudiantes). Quisiera cotizar y agendar una demostración gratuita.')}
               >
                 Solicitar demostración
               </Button>
