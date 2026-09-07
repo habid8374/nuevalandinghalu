@@ -20,7 +20,10 @@ import {
   GraduationCap,
   BarChart3,
   Shield,
-  Sparkles
+  Sparkles,
+  FlaskConical,
+  Calculator,
+  Award
 } from 'lucide-react';
 
 function IntroVideo({ onFinish }) {
@@ -748,6 +751,161 @@ export default function Home() {
                   { icon: '🏫', titulo: 'Sedes y grupos como los exige el SIMAT', desc: 'Administra varias sedes y organiza cada grado en grupos (01, 02, A, B…). Todo viaja al reporte oficial automáticamente.' },
                   { icon: '📊', titulo: 'SIMPADE integrado', desc: 'Estrato, SISBÉN, régimen de salud, víctimas del conflicto y discapacidad capturados en la caracterización del estudiante.' },
                   { icon: '🔐', titulo: '100% aislado por institución', desc: 'Cada colegio ve y exporta únicamente su propia matrícula. Sin mezclas, sin errores.' },
+                ].map((item, i) => (
+                  <div key={i} className="flex items-start gap-4 p-4 rounded-xl hover:bg-white transition-colors">
+                    <span className="text-2xl flex-shrink-0">{item.icon}</span>
+                    <div>
+                      <h4 className="font-bold text-[#1B4B7A] mb-1">{item.titulo}</h4>
+                      <p className="text-sm text-[#6B6B6B] leading-relaxed">{item.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* HALU STEAM */}
+      <section className="py-24 px-6 bg-white overflow-hidden">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-16 items-center">
+            <div>
+              <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 bg-[#FF6B7A]/10 rounded-full text-sm font-semibold text-[#FF6B7A]">
+                <FlaskConical className="w-4 h-4" /> Módulo 20 · Nuevo 2026
+              </div>
+              <h2 className="font-display font-bold text-4xl md:text-5xl text-[#1B4B7A] mb-4">
+                HALU STEAM: ciencia, tecnología y{' '}
+                <span className="text-[#FF6B7A]">robótica, con nota real</span>
+              </h2>
+              <p className="text-lg text-[#6B6B6B] mb-8 leading-relaxed">
+                Simulaciones interactivas, proyectos por problemas y retos de robótica — todo enlazado al libro de notas de siempre, con su propia categoría de evaluación, para que STEAM pondere en el boletín como cualquier otra actividad.
+              </p>
+              <div className="space-y-4">
+                {[
+                  { icon: '🧪', titulo: 'Simulaciones interactivas (PhET, GeoGebra)', desc: 'Física, química, matemáticas y biología, del catálogo público o del propio colegio.' },
+                  { icon: '📌', titulo: 'Categoría de evaluación al asignar', desc: 'El docente elige Saber, Saber Hacer o Ser; la nota pondera sola en el boletín.' },
+                  { icon: '🧩', titulo: 'Proyectos de Aprendizaje Basado en Problemas', desc: 'Con hitos, equipo de estudiantes y evidencias, enlazados a una actividad calificable propia.' },
+                  { icon: '🤖', titulo: 'Catálogo de Retos STEAM', desc: 'Plantillas de ingeniería y robótica de bajo costo, más tarjetas de competencias externas (FIRST LEGO League, VEX).' },
+                  { icon: '🏅', titulo: 'Insignias y portafolio del estudiante', desc: 'Microcredenciales y reconocimiento visible con todos sus proyectos y simulaciones en un solo lugar.' },
+                ].map((item, i) => (
+                  <div key={i} className="flex items-start gap-4 p-4 rounded-xl hover:bg-[#F8F6F3] transition-colors">
+                    <span className="text-2xl flex-shrink-0">{item.icon}</span>
+                    <div>
+                      <h4 className="font-bold text-[#1B4B7A] mb-1">{item.titulo}</h4>
+                      <p className="text-sm text-[#6B6B6B] leading-relaxed">{item.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="relative">
+              <div className="bg-gradient-to-br from-[#1B4B7A] to-[#0F2A42] rounded-3xl p-8 text-white shadow-2xl">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-10 h-10 bg-[#FF6B7A] rounded-xl flex items-center justify-center flex-shrink-0">
+                    <FlaskConical className="w-5 h-5 text-white" />
+                  </div>
+                  <div>
+                    <p className="font-bold text-lg">Portafolio STEAM</p>
+                    <p className="text-white/60 text-sm">Estudiante · Grado 8°</p>
+                  </div>
+                  <span className="ml-auto bg-green-400/20 text-green-300 text-xs font-bold px-3 py-1 rounded-full">3 insignias</span>
+                </div>
+                <div className="space-y-3 mb-6">
+                  {[
+                    { label: 'Proyecto ABP', valor: 'Puente de espaguetis' },
+                    { label: 'Simulación', valor: 'Circuitos eléctricos (PhET)' },
+                    { label: 'Reto STEAM', valor: 'Robótica — FIRST LEGO League' },
+                    { label: 'Categoría', valor: 'Saber Hacer' },
+                  ].map((item, i) => (
+                    <div key={i} className="flex justify-between items-center bg-white/10 rounded-lg px-4 py-2 text-sm">
+                      <span className="text-white/60">{item.label}</span>
+                      <span className="font-semibold">{item.valor}</span>
+                    </div>
+                  ))}
+                </div>
+                <div className="border-t border-white/10 pt-4">
+                  <p className="text-white/60 text-xs mb-3 uppercase tracking-wide font-semibold">Insignias obtenidas</p>
+                  <div className="flex gap-3">
+                    {['Ingeniería', 'Física aplicada', 'Trabajo en equipo'].map((c, i) => (
+                      <div key={i} className="flex flex-col items-center gap-1 flex-1">
+                        <Award className="w-6 h-6 text-[#FF6B7A]" />
+                        <span className="text-[10px] text-white/70 text-center leading-tight">{c}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+              <div className="absolute -bottom-4 -right-4 bg-[#FF6B7A] text-white text-xs font-bold px-4 py-2 rounded-full shadow-lg">
+                ★ Nuevo 2026
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* HALU Math */}
+      <section className="py-24 px-6 bg-[#F8F6F3] overflow-hidden">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-16 items-center">
+            <div className="order-2 md:order-1 relative">
+              <div className="bg-white rounded-3xl p-8 shadow-2xl border-2 border-[#E5E3DF]">
+                <div className="flex items-center justify-between mb-6">
+                  <div>
+                    <p className="font-bold text-[#1B4B7A] text-lg">Progreso del Grupo</p>
+                    <p className="text-[#6B6B6B] text-sm">HALU Math · DBA en curso</p>
+                  </div>
+                  <div className="bg-[#1B4B7A] text-white text-xs font-bold px-3 py-2 rounded-lg">Adaptativo</div>
+                </div>
+                <div className="space-y-3 mb-6">
+                  {[
+                    { label: 'Básico', valor: 18, color: '#FF6B7A' },
+                    { label: 'Medio', valor: 32, color: '#F5A623' },
+                    { label: 'Alto', valor: 28, color: '#1B4B7A' },
+                    { label: 'Dominado', valor: 22, color: '#2E9E5B' },
+                  ].map((item, i) => (
+                    <div key={i}>
+                      <div className="flex justify-between text-xs text-[#6B6B6B] mb-1">
+                        <span>{item.label}</span>
+                        <span className="font-semibold">{item.valor}% del grupo</span>
+                      </div>
+                      <div className="w-full h-2 bg-[#F8F6F3] rounded-full overflow-hidden">
+                        <div className="h-full rounded-full" style={{width: `${item.valor}%`, background: item.color}} />
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                <div className="space-y-2">
+                  {['5 aciertos seguidos suben de nivel', 'Un error resetea la racha, sin bajar de nivel', 'Alineado a un DBA oficial del MEN'].map((item, i) => (
+                    <div key={i} className="flex items-center gap-2 text-sm text-[#2C2C2C]">
+                      <CheckCircle2 className="w-4 h-4 text-[#1B4B7A] flex-shrink-0" />
+                      {item}
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div className="absolute -top-4 -left-4 bg-[#1B4B7A] text-white text-xs font-bold px-4 py-2 rounded-full shadow-lg">
+                ★ Nuevo 2026
+              </div>
+            </div>
+            <div className="order-1 md:order-2">
+              <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 bg-[#1B4B7A]/10 rounded-full text-sm font-semibold text-[#1B4B7A]">
+                <Calculator className="w-4 h-4" /> Módulo 21 · Nuevo 2026
+              </div>
+              <h2 className="font-display font-bold text-4xl md:text-5xl text-[#1B4B7A] mb-4">
+                HALU Math: el nivel lo pone el{' '}
+                <span className="text-[#FF6B7A]">desempeño real del estudiante</span>
+              </h2>
+              <p className="text-lg text-[#6B6B6B] mb-8 leading-relaxed">
+                Inspirado en los motores adaptativos de las plataformas líderes de matemáticas, pero pensado para el currículo colombiano: cada ejercicio está alineado a un DBA oficial del MEN y el nivel de dificultad sube o baja solo, según los aciertos reales del estudiante.
+              </p>
+              <div className="space-y-4">
+                {[
+                  { icon: '📈', titulo: 'Banco de ejercicios adaptativo por DBA', desc: '5 aciertos seguidos suben de nivel (Básico → Medio → Alto → Dominado); un error resetea la racha sin bajar de nivel.' },
+                  { icon: '🧮', titulo: 'Laboratorio Matemático con manipulativos', desc: 'Recta numérica abierta, bloques de base 10 y balanza de ecuaciones, de uso libre en clase.' },
+                  { icon: '🎯', titulo: 'Modo Reto conectado al mismo motor', desc: 'Los manipulativos también alimentan el motor de dominio del banco de ejercicios, sin un sistema aparte.' },
+                  { icon: '⏱️', titulo: 'Evaluación por fluidez', desc: 'Combina tiempo de respuesta y dudas antes de responder: un acierto lento y dubitativo no basta por sí solo para el dominio final.' },
+                  { icon: '👀', titulo: 'Progreso del Grupo, de un vistazo', desc: 'El docente ve el nivel de cada estudiante en cada DBA sin revisar uno por uno; la IA amplía el banco propio del colegio.' },
                 ].map((item, i) => (
                   <div key={i} className="flex items-start gap-4 p-4 rounded-xl hover:bg-white transition-colors">
                     <span className="text-2xl flex-shrink-0">{item.icon}</span>
