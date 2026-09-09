@@ -23,7 +23,8 @@ import {
   Sparkles,
   FlaskConical,
   Calculator,
-  Award
+  Award,
+  Landmark
 } from 'lucide-react';
 
 function IntroVideo({ onFinish }) {
@@ -760,6 +761,91 @@ export default function Home() {
                     </div>
                   </div>
                 ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Presupuesto FSE */}
+      <section className="py-24 px-6 bg-white overflow-hidden">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-16 items-center">
+            <div>
+              <div className="flex flex-wrap items-center gap-3 mb-4">
+                <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#1B4B7A]/10 rounded-full text-sm font-semibold text-[#1B4B7A]">
+                  <Landmark className="w-4 h-4" /> Módulo 18 · Decreto 1075 de 2015 / Ley 715
+                </div>
+                <div className="inline-flex items-center gap-2 px-3 py-2 bg-amber-400 rounded-full text-xs font-bold text-[#0F2A42] uppercase tracking-wide">
+                  🏛️ Exclusivo colegios oficiales
+                </div>
+              </div>
+              <h2 className="font-display font-bold text-4xl md:text-5xl text-[#1B4B7A] mb-4">
+                Presupuesto FSE: el ciclo presupuestal público,{' '}
+                <span className="text-[#FF6B7A]">blindado paso a paso</span>
+              </h2>
+              <p className="text-lg text-[#6B6B6B] mb-4 leading-relaxed">
+                Digitaliza el ciclo de presupuesto del Fondo de Servicios Educativos (FSE) que exige la ley para los colegios oficiales — todo por interfaz, con botones y reportes listos para los entes de control, sin comandos ni hojas de cálculo externas.
+              </p>
+              <p className="text-sm font-semibold text-amber-900 bg-amber-50 border border-amber-200 rounded-xl px-4 py-3 mb-8">
+                ⚠️ Este módulo aplica únicamente a instituciones educativas oficiales/públicas que administran un FSE. Si tu colegio es privado, no lo necesitas — tu gestión financiera está cubierta por el módulo de Finanzas y Pagos.
+              </p>
+              <div className="space-y-4">
+                {[
+                  { icon: '🔒', titulo: 'Ciclo presupuestal completo y topado', desc: 'Apropiación → CDP → RP → Obligación → Orden de Pago. Cada etapa valida contra el saldo disponible de la anterior: es imposible comprometer o pagar más de lo presupuestado.' },
+                  { icon: '📅', titulo: 'Vigencias fiscales y rubros oficiales', desc: 'Apertura de vigencia y rubros de ingreso y gasto según el catálogo presupuestal público.' },
+                  { icon: '📎', titulo: 'Modificaciones con soporte documental', desc: 'Adiciones, reducciones y traslados entre rubros, con el acto administrativo cargado en PDF, JPG o PNG.' },
+                  { icon: '📊', titulo: 'Reportes listos para los entes de control', desc: 'Ejecución presupuestal de ingresos, gastos y balance, exportada en PDF lista para presentar.' },
+                  { icon: '🧾', titulo: 'Contabilidad, retenciones y tesorería', desc: 'Catálogo General de Cuentas (CGC), comprobantes contables, ReteFuente/ReteICA/estampillas y cuentas bancarias con saldo real.' },
+                  { icon: '📦', titulo: 'Almacén y manual en lenguaje sencillo', desc: 'Control de elementos de consumo y devolutivos con alerta de stock mínimo; todo pensado para personal administrativo no técnico.' },
+                ].map((item, i) => (
+                  <div key={i} className="flex items-start gap-4 p-4 rounded-xl hover:bg-[#F8F6F3] transition-colors">
+                    <span className="text-2xl flex-shrink-0">{item.icon}</span>
+                    <div>
+                      <h4 className="font-bold text-[#1B4B7A] mb-1">{item.titulo}</h4>
+                      <p className="text-sm text-[#6B6B6B] leading-relaxed">{item.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="relative">
+              <div className="bg-gradient-to-br from-[#1B4B7A] to-[#0F2A42] rounded-3xl p-8 text-white shadow-2xl">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-10 h-10 bg-[#FF6B7A] rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Landmark className="w-5 h-5 text-white" />
+                  </div>
+                  <div>
+                    <p className="font-bold text-lg">Ciclo Presupuestal FSE</p>
+                    <p className="text-white/60 text-sm">Vigencia fiscal 2026</p>
+                  </div>
+                  <span className="ml-auto bg-green-400/20 text-green-300 text-xs font-bold px-3 py-1 rounded-full">Saldo controlado</span>
+                </div>
+                <div className="space-y-3 mb-6">
+                  {[
+                    { paso: '1 · Apropiación', desc: 'Presupuesto inicial del rubro' },
+                    { paso: '2 · CDP', desc: 'Certificado de Disponibilidad' },
+                    { paso: '3 · RP', desc: 'Registro Presupuestal' },
+                    { paso: '4 · Obligación', desc: 'Bien o servicio recibido' },
+                    { paso: '5 · Orden de Pago', desc: 'Pago efectivo al proveedor' },
+                  ].map((item, i) => (
+                    <div key={i} className="flex items-center gap-3 bg-white/10 rounded-lg px-4 py-2.5 text-sm">
+                      <CheckCircle2 className="w-4 h-4 text-[#FF6B7A] flex-shrink-0" />
+                      <div className="flex-1">
+                        <span className="font-semibold">{item.paso}</span>
+                        <span className="text-white/60"> — {item.desc}</span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                <div className="border-t border-white/10 pt-4">
+                  <p className="text-white/70 text-xs leading-relaxed">
+                    Cada etapa queda topada por el saldo disponible de la anterior: comprometer o pagar de más es matemáticamente imposible.
+                  </p>
+                </div>
+              </div>
+              <div className="absolute -bottom-4 -right-4 bg-amber-400 text-[#0F2A42] text-xs font-bold px-4 py-2 rounded-full shadow-lg">
+                Solo instituciones oficiales
               </div>
             </div>
           </div>
